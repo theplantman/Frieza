@@ -29,6 +29,6 @@ function dec(data)
     end))
 end
 return {
-  Decode = dec
+  Decode = dec,
   Encode = enc
 }
