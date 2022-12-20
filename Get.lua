@@ -1,7 +1,6 @@
 --<|> Base64 <|>--
 local Base64 = loadstring(game:HttpGet("https://raw.githubusercontent.com/theplantman/Frieza/main/Base64.lua"))()
 --<|> Run <|>--
-local DiscordId = "886431466186240000"
 local Eid
 if gethwid or get_hwid then
     Eid = gethwid or get_hwid
@@ -33,7 +32,5 @@ else
     end
 end
 if Eid then
-    local List = game.HttpService:JSONDecode(Base64["Decode"](game:HttpGet("https://raw.githubusercontent.com/theplantman/Frieza/main/List")))
-    List[DiscordId] = Eid
-    setclipboard(Base64["Encode"](game.HttpService:JSONEncode(List)))
+    setclipboard(Base64["Encode"](Eid))
 end
