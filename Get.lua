@@ -1,9 +1,11 @@
+--<|> Base64 <|>--
+local Base64 = loadstring(game:HttpGet("https://raw.githubusercontent.com/theplantman/Frieza/main/Base64.lua"))()
 --<|> Run <|>--
 local Eid
 if gethwid or get_hwid then
     Eid = gethwid or get_hwid
 else
-    local Request =  request or syn.request
+    local Request = http_request  or request or syn.request
     local Headers = game.HttpService:JSONDecode(Request({
         ["Method"] = "GET",
         ["Url"] = "http://mockbin.com/request"
@@ -30,5 +32,6 @@ else
     end
 end
 if Eid then
-    setclipboard(Eid)
+    local Data = game.HttpService:JSONDecode(game:HttpGet("https://Frying-Pan.theplantman.repl.co?eid=" .. Base64["Encode"](Eid) .. "&type=gff"))
+    
 end
