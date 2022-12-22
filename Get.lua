@@ -1,5 +1,3 @@
---<|> Base64 <|>--
-local Base64 = loadstring(game:HttpGet("https://raw.githubusercontent.com/theplantman/Frieza/main/Base64.lua"))()
 --<|> Run <|>--
 local Eid
 if gethwid or get_hwid then
@@ -32,5 +30,5 @@ else
     end
 end
 if Eid then
-    setclipboard(Base64["Encode"](Eid))
+    setclipboard(Eid)
 end
